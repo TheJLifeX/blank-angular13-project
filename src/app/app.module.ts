@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxScrollPositionRestorationModule } from 'ngx-scroll-position-restoration';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +11,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxScrollPositionRestorationModule.forRoot({
+      debug: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
